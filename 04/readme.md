@@ -8,16 +8,6 @@
 2. Провести рефактринг "кода с душком"
 3. Научиться отличать хороший код от плохого
 
-### Подготовка к выполнению домашнего задания
-
-1. Для выполнения задания и прохождения курса нужен .....
-2. Аккаунт на [GitHub](https://github.com/). [Инструкция по регистрации на GitHub](https://github.com/netology-code/cppm-homeworks/tree/main/common/sign%20up).
-3. Система контроля версий [Git](https://git-scm.com/), установленная локально. [Инструкция по установке Git](https://github.com/netology-code/cppm-homeworks/tree/main/common/download).
-
-### Инструкция по выполнению домашнего задания
-
-[Инструкция дана по ссылке](https://github.com/netology-code/cppm-homeworks/blob/main/common/readme.md).
-
 ------
 
 ### Задание 1
