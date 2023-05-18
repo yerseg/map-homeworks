@@ -66,24 +66,24 @@ Shape transform::scaleY(int d)
 	switch (shape.getType())
 	{
 	case Shape::line:
-		shape.x1 *= d;
-		shape.x2 *= d;
+		shape.y1 *= d;
+		shape.y2 *= d;
 		break;
 	case Shape::sqr:
-		shape.x1 *= d;
-		shape.x2 *= d;
-		shape.x3 *= d;
-		shape.x4 *= d;
+		shape.y1 *= d;
+		shape.y2 *= d;
+		shape.y3 *= d;
+		shape.y4 *= d;
 		break;
 	case Shape::cube:
-		shape.x1 *= d;
-		shape.x2 *= d;
-		shape.x3 *= d;
-		shape.x4 *= d;
-		shape.x5 *= d;
-		shape.x6 *= d;
-		shape.x7 *= d;
-		shape.x8 *= d;
+		shape.y1 *= d;
+		shape.y2 *= d;
+		shape.y3 *= d;
+		shape.y4 *= d;
+		shape.y5 *= d;
+		shape.y6 *= d;
+		shape.y7 *= d;
+		shape.y8 *= d;
 		break;
 	}
 	return shape;
@@ -94,24 +94,24 @@ Shape transform::scaleZ(int e)
 	switch (shape.getType())
 	{
 	case Shape::line:
-		shape.x1 *= e;
-		shape.x2 *= e;
+		shape.y1 *= e;
+		shape.y2 *= e;
 		break;
 	case Shape::sqr:
-		shape.x1 *= e;
-		shape.x2 *= e;
-		shape.x3 *= e;
-		shape.x4 *= e;
+		shape.y1 *= e;
+		shape.y2 *= e;
+		shape.y3 *= e;
+		shape.y4 *= e;
 		break;
 	case Shape::cube:
-		shape.x1 *= e;
-		shape.x2 *= e;
-		shape.x3 *= e;
-		shape.x4 *= e;
-		shape.x5 *= e;
-		shape.x6 *= e;
-		shape.x7 *= e;
-		shape.x8 *= e;
+		shape.y1 *= e;
+		shape.y2 *= e;
+		shape.y3 *= e;
+		shape.y4 *= e;
+		shape.y5 *= e;
+		shape.y6 *= e;
+		shape.y7 *= e;
+		shape.y8 *= e;
 		break;
 	}
 	return shape;
