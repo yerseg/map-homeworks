@@ -4,7 +4,7 @@
 Shape::Shape(int _type, int _x1, int _y1, int _z1, int _x2, int _y2, int _z2, int _x3, int _y3, int _z3, int _x4, int _y4, int _z4, int _x5, int _y5, int _z5, int _x6, int _y6, int _z6, int _x7, int _y7, int _z7, int _x8, int _y8, int _z8)
 {
 	type = _type;
-	// заполняем координаты фигуры
+	// Р·Р°РїРѕР»РЅВ¤РµРј РєРѕРѕСЂРґРёРЅР°С‚С‹ С„РёРіСѓСЂС‹
 	switch (type)
 	{
 	case line: 
@@ -30,9 +30,9 @@ Shape::Shape(int _type, int _x1, int _y1, int _z1, int _x2, int _y2, int _z2, in
 	default:
 		break;
 	}
-
-	// Считаем площадь фигуры
-	// стороны фигуры
+	
+	// СЃС‡РёС‚Р°РµРј РїР»РѕС‰Р°РґСЊ С„РёРіСѓСЂС‹
+	// СЃС‚РѕСЂРѕРЅС‹ С„РёРіСѓСЂС‹
 	int a = abs(x1 - x2);
 	int b = abs(y1 - y2);
 	int c = abs(z1 - z2);
@@ -51,8 +51,8 @@ Shape::Shape(int _type, int _x1, int _y1, int _z1, int _x2, int _y2, int _z2, in
 		break;
 	}
 
-	// Считаем объем фигуры
-	// стороны фигуры
+	// СЃС‡РёС‚Р°РµРј РѕР±СЉРµРј С„РёРіСѓСЂС‹
+	// СЃС‚РѕСЂРѕРЅС‹ С„РёРіСѓСЂС‹
 	switch (type)
 	{
 	case line:
@@ -72,7 +72,7 @@ Shape::Shape(int _type, int _x1, int _y1, int _z1, int _x2, int _y2, int _z2, in
 
 Shape::Shape(int type, int _x1, int _y1, double R, double H)
 {
-	// заполняем координаты фигуры
+	// Р·Р°РїРѕР»РЅВ¤РµРј РєРѕРѕСЂРґРёРЅР°С‚С‹ С„РёРіСѓСЂС‹
 	switch (type)
 	{
 	case circle:
@@ -88,8 +88,8 @@ Shape::Shape(int type, int _x1, int _y1, double R, double H)
 		break;
 	}
 
-	// Считаем площадь фигуры
-	// стороны фигуры
+	// СЃС‡РёС‚Р°РµРј РїР»РѕС‰Р°РґСЊ С„РёРіСѓСЂС‹
+	// СЃС‚РѕСЂРѕРЅС‹ С„РёРіСѓСЂС‹
 
 	switch (type)
 	{
@@ -103,8 +103,8 @@ Shape::Shape(int type, int _x1, int _y1, double R, double H)
 		break;
 	}
 
-	// Считаем объем фигуры
-	// стороны фигуры
+	// СЃС‡РёС‚Р°РµРј РѕР±СЉРµРј С„РёРіСѓСЂС‹
+	// СЃС‚РѕСЂРѕРЅС‹ С„РёРіСѓСЂС‹
 	switch (type)
 	{
 	case line:
