@@ -31,11 +31,11 @@ Shape::Shape(int _type, int _x1, int _y1, int _z1, int _x2, int _y2, int _z2, in
 		break;
 	}
 	
-	// считаем площадь фигуры
 	// стороны фигуры
 	int a = abs(x1 - x2);
 	int b = abs(y1 - y2);
 	int c = abs(z1 - z2);
+	// считаем площадь фигуры
 	switch (type)
 	{
 	case line:
@@ -52,7 +52,6 @@ Shape::Shape(int _type, int _x1, int _y1, int _z1, int _x2, int _y2, int _z2, in
 	}
 
 	// считаем объем фигуры
-	// стороны фигуры
 	switch (type)
 	{
 	case line:
@@ -89,8 +88,6 @@ Shape::Shape(int type, int _x1, int _y1, double R, double H)
 	}
 
 	// считаем площадь фигуры
-	// стороны фигуры
-
 	switch (type)
 	{
 	case circle:
@@ -104,16 +101,12 @@ Shape::Shape(int type, int _x1, int _y1, double R, double H)
 	}
 
 	// считаем объем фигуры
-	// стороны фигуры
 	switch (type)
 	{
-	case line:
+	case circle:
 		volume = 0;
 		break;
-	case sqr:
-		volume = 0;
-		break;
-	case cube:
+	case cylinder:
 		volume = M_PI * R * R * height;
 		break;
 	default:
