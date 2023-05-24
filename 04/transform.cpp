@@ -94,24 +94,24 @@ Shape transform::scaleZ(int e)
 	switch (shape.getType())
 	{
 	case Shape::line:
-		shape.y1 *= e;
-		shape.y2 *= e;
+		shape.z1 *= e;
+		shape.z2 *= e;
 		break;
 	case Shape::sqr:
-		shape.y1 *= e;
-		shape.y2 *= e;
-		shape.y3 *= e;
-		shape.y4 *= e;
+		shape.z1 *= e;
+		shape.z2 *= e;
+		shape.z3 *= e;
+		shape.z4 *= e;
 		break;
 	case Shape::cube:
-		shape.y1 *= e;
+		shape.z1 *= e;
 		shape.y2 *= e;
-		shape.y3 *= e;
-		shape.y4 *= e;
-		shape.y5 *= e;
-		shape.y6 *= e;
-		shape.y7 *= e;
-		shape.y8 *= e;
+		shape.z3 *= e;
+		shape.z4 *= e;
+		shape.z5 *= e;
+		shape.z6 *= e;
+		shape.z7 *= e;
+		shape.z8 *= e;
 		break;
 	}
 	return shape;
