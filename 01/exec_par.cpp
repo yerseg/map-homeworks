@@ -1,35 +1,32 @@
-#include "timer.h"
-#include <iostream>
-#include <vector>
-#include <random>
 #include <algorithm>
-#include <execution>
 #include <chrono>
-using namespace std;
+#include <execution>
+#include <iostream>
+#include <random>
+#include <vector>
 
-void Sort(vector<int> v) {
-    auto start = chrono::high_resolution_clock::now();
-    sort(v.begin(), v.end());
-    auto end = chrono::high_resolution_clock::now();
-    chrono::duration<double, milli> time = end - start;
-    cout << "std::sort time = " << time.count() << endl;
+void Sort(std::vector<int> v) {
+    auto start = std::chrono::high_resolution_clock::now();
+    std::sort(v.begin(), v.end());
+    auto end = std::chrono::high_resolution_clock::now();
+    auto time = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
+    std::cout << "std::sort time = " << time.count() << std::endl;
 }
 
-void ParSort(vector<int> v) {
-    auto start = chrono::high_resolution_clock::now();
-    sort(execution::par, v.begin(), v.end());
-    auto end = chrono::high_resolution_clock::now();
-    chrono::duration<double, milli> time = end - start;
-    cout << "std::parallel sort time = " << time.count() << endl;
+void ParSort(std::vector<int> v) {
+    auto start = std::chrono::high_resolution_clock::now();
+    // std::sort(std::execution::par, v.begin(), v.end());
+    auto end = std::chrono::high_resolution_clock::now();
+    auto time = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
+    std::cout << "std::parallel sort time = " << time.count() << std::endl;
 }
 
-int main_exec()
-{
-    vector<int> V(1'000'000);
-    mt19937 gen;
-    uniform_int_distribution<int> dis(0, 1'000'000);
-    auto rand_num([=]() mutable {return dis(gen); });
-    generate(V.begin(), V.end(), rand_num);
+int main() {
+    std::vector<int> V(1'000'000);
+    std::mt19937 gen;
+    std::uniform_int_distribution<int> dis(0, 1'000'000);
+    auto rand_num([=]() mutable { return dis(gen); });
+    std::generate(V.begin(), V.end(), rand_num);
 
     Sort(V);
     ParSort(V);
