@@ -12,22 +12,22 @@ int func4(int x) {
     return x * 4;
 }
 
-thread_local int x = 2;
+thread_local int g_x = 2;
 
 void func5() {
     using namespace std::chrono_literals;
 
     std::this_thread::sleep_for(100ms);
-    x = x * 10;
-    std::cout << x << std::endl;
+    g_x = g_x * 10;
+    std::cout << g_x << std::endl;
 }
 
 void func6() {
     using namespace std::chrono_literals;
 
     std::this_thread::sleep_for(500ms);
-    x = x + 10;
-    std::cout << x << std::endl;
+    g_x = g_x + 10;
+    std::cout << g_x << std::endl;
 }
 
 std::once_flag flag;

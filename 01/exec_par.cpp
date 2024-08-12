@@ -15,7 +15,7 @@ void Sort(std::vector<int> v) {
 
 void ParSort(std::vector<int> v) {
     auto start = std::chrono::high_resolution_clock::now();
-    // std::sort(std::execution::par, v.begin(), v.end());
+    std::sort(std::execution::par, v.begin(), v.end());
     auto end = std::chrono::high_resolution_clock::now();
     auto time = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
     std::cout << "std::parallel sort time = " << time.count() << std::endl;
