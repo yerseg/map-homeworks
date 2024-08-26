@@ -7,12 +7,12 @@
 
 using namespace std::chrono_literals;
 
-bool flag = false;
+bool stopped = false;
 std::mutex m3;
 
 void wait_flag() {
     std::unique_lock<std::mutex> l(m3);
-    while (!flag) {
+    while (!stopped) {
         l.unlock();
         std::this_thread::sleep_for(200ms);
         l.lock();
@@ -24,7 +24,7 @@ void wait_flag() {
 void set_flag() {
     std::this_thread::sleep_for(1s);
     std::unique_lock<std::mutex> l(m3);
-    flag = true;
+    stopped = true;
     l.unlock();
 }
 

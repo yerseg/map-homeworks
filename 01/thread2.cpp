@@ -30,14 +30,14 @@ void func6() {
     std::cout << g_x << std::endl;
 }
 
-std::once_flag flag;
+std::once_flag stopped;
 
 void print_once() {
     std::cout << "!";
 }
 
 void print(size_t x) {
-    std::call_once(flag, print_once);
+    std::call_once(stopped, print_once);
     std::cout << x << " ";
 }
 
